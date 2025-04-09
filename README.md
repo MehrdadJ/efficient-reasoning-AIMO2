@@ -57,7 +57,8 @@ Model Loading: Initializing the quantized model with appropriate parameters
 Answer Extraction: Parsing the model outputs to extract final answers
 Batched Inference: Efficient processing of multiple problems simultaneously
 
-pythondef extract_boxed_text(text):
+```
+def extract_boxed_text(text):
     pattern = r'oxed{(.*?)}'
     matches = re.findall(pattern, text)
     if not matches:
@@ -90,6 +91,8 @@ def predict_for_question(question: str) -> int:
     # Select final answer based on majority voting
     answer = select_answer(extracted_answers)
     return answer
+```
+
 Competition Results
 Our model achieved bronze medal performance in the AIMO Progress Prize 2 competition. Performance across different mathematical benchmarks:
 
